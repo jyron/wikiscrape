@@ -1,5 +1,5 @@
-# webber3000
-attempt at a webscraper using scrapy
+# wikiscrape
+attempt at a webscraper
 
 PURPOSE:
   This tool will scrape wikipedia for summaries of various subjects
