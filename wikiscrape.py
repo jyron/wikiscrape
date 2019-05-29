@@ -15,7 +15,7 @@ for data in datarows:
     #print(link)
     citydict[city] = link
 
-# function to retrieve user input, get page from wikipedia, and create list containing paragraphs from wiki page
+# function to retrieve user input, get page from wikipedia, and run for loop containing paragraphs from wiki page
 def citysummary():
     #ask user for a city and format it (title) to match our dict keys
     userchoice = input('What U.S city would you like to learn about today? ')
