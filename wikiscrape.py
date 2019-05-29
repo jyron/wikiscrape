@@ -40,6 +40,7 @@ def citysummary():
             print('Here is more for you')
             print('-------------------')
             print(summy.text)
+            print('-------------------')
             x -= 1
             print('There are ' + str(x) + ' additional paragraphs of info')
         elif answer.upper() != 'YES':
