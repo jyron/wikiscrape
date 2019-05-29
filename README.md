@@ -13,6 +13,6 @@ HOW TO:
   5.from terminal: cd Desktop #(or wherever you are holding the file)
   5.from terminal: python3 wikiscrape.py
  Now you can type in any major U.S city name and wikiscrape will print info in paragraph increments.
- yes for more info, no to stop program.
+ 'yes' for more info, 'no' to stop program.
   That's it!
   
