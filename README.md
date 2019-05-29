@@ -1,5 +1,5 @@
 # wikiscrape
-first attempt at a webscraper
+Wikipedia webscraper, pulls info on most major U.S cities.
 
 PURPOSE:
   - This tool scrapes wikipedia for summaries of top U.S cities and displays for the user. 
