@@ -1,18 +1,18 @@
-# wikiscrape
-Wikipedia webscraper, pulls info on most major U.S cities.
+# WikiScraper Collection
+Collection of user interactive programs for learning about various subjects.
 
-PURPOSE:
-  - This tool scrapes wikipedia for summaries of top U.S cities and displays for the user. 
-  - Wikipedia is a great free resource for practicing use of the requests library and features of BeautifulSoup4.
-  
-HOW TO:
-  1. Download wikiscrape.py and put it on your desktop
-  2. open terminal (on linux or mac)
-  3. from terminal: pip3 install requests
-  4. from terminal: pip3 install BeautifulSoup4
-  5. from terminal: cd Desktop #(or wherever you are holding the file)
-  6. from terminal: python3 wikiscrape.py
-  7. Thats it! Type a city into terminal and receive city info, then 'yes' for more, 'no' to close.
+Created using BeautifulSoup4 and requests
+
+## Projects
+- <b>Wikiscrape.py:</b> Searches wikipedia for Major U.S Cities.  Prints summaries, section by section, at users request.
+- <b>species_scrape.py:</b> Prompts user to explore threatened species on Center For Biodiversity site.  Eventually asks them to join email list to help save their favorite wildlife.
+
+HOW TO:(ex. uses wikiscrape.py)
+1. download wikiscrape.py
+2. open terminal (mac/linux)
+3. cd to same folder as wikiscrape.py
+4. type 'python3 wikiscrape.py'
+5. have fun learning!
   
    
   
