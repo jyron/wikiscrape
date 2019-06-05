@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-
+from PIL import Image
+from io import BytesIO
+donatelink = 'https://act.biologicaldiversity.org/onlineactions/mLBxIVrBY0-PF8_oJWJbEw2?utm_expid=.QGpwm5uyRCWKJOr0upwtRQ.2&utm_referrer=https%3A%2F%2Fwww.biologicaldiversity.org%2F'
 home = requests.get('https://www.biologicaldiversity.org/species/')
 soup = BeautifulSoup(home.text, 'lxml')
 mainlinks = soup.find(class_ = 'col cbd_content_main').find_all('a')
@@ -31,10 +33,24 @@ def userprogram():
             print('{}. {}'.format(b,combo[0].title()))
         print('Choose one to learn more (1-{}): '.format(len(creature_list)))
         iii = int(input(''))
-        print(creature_list[iii-1][1])
+        creature_site = requests.get(creature_list[iii-1][1])
+        creature_soup = BeautifulSoup(creature_site.text, 'lxml')
+        creature_summary = creature_soup.find(class_='col-md-6 cbd_content_left').find_all('p')
+        creature_img_url = creature_soup.find(class_='banner').find('img')['src']
+        imglink = 'https://www.biologicaldiversity.org/' + creature_img_url
+        r = requests.get(imglink)
+        specimg = Image.open(BytesIO(r.content))
+        specimg.show()
+        print('-'*20)
+        print('Here\'s a pic of the {}'.format(creature_list[iii-1][0]))
+        print('-'*20)
 
-
-               
+        for sec in creature_summary:
+            print(sec.text)
+            print('-'*20)
+        print('The {} needs your help!  Click this link to donate: '.format(creature_list[iii-1][0]))
+        print(donatelink)
+        
 userprogram()
  
 
