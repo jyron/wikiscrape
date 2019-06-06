@@ -33,8 +33,8 @@ def userprogram():
             print("-"*20)
         else:
             pass
-    ii = input('Would you like a list of {} that you could help to save? (yes/no) '.format(speclist[i-1]))
-    if ii == True:
+    ii = input('Would you like a list of {} that you could help to save? (y/n) '.format(speclist[i-1]))
+    if ii.lower() == 'y':
         species_img.close()
         creeature_page = soup2.find(class_='col-md-4 cbd_content_sidebar').find_all('a')
         creature_links = ['https://www.biologicaldiversity.org/species/' + speclist[i-1].lower() + '/' + creature['href'] for creature in creeature_page if len(creature.text) > 2]
