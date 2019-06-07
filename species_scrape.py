@@ -12,12 +12,10 @@ refs = ['https://www.biologicaldiversity.org/species/' + link['href'] for link i
 
 
 def userprogram():
-    misc = input('whats your favorite animal,kangaroos...cats...otters?')
-    print(misc.upper() + '?!!? MADAM/SIR THEY ARE ENDANGERED. PLS HELP US BY FOLLOWING THESE INSTRUCTIONS')
-    print('.'*20)
+    
     for a, b in enumerate(speclist, 1):
         print("{}. {}".format(a, b))
-    i = int(input('Choose a species to explore :) (1-7): '))
+    i = int(input('Type a number 1-7 to explore a subject: '))
     page = requests.get(refs[i-1])
     soup2 = BeautifulSoup(page.text, 'lxml')
     species_img_url = soup2.find(class_='banner').find('img')['src']
@@ -33,15 +31,15 @@ def userprogram():
             print("-"*20)
         else:
             pass
-    ii = input('Would you like a list of {} that you could help to save? (y/n) '.format(speclist[i-1]))
+    ii = input('Would you like a list of {} that you could help to save? (type y/n) '.format(speclist[i-1]))
     if ii.lower() == 'y':
         species_img.close()
-        creeature_page = soup2.find(class_='col-md-4 cbd_content_sidebar').find_all('a')
-        creature_links = ['https://www.biologicaldiversity.org/species/' + speclist[i-1].lower() + '/' + creature['href'] for creature in creeature_page if len(creature.text) > 2]
-        creature_list = [creature.text for creature in creeature_page if len(creature.text) > 2]
+        creature_page = soup2.find(class_='col-md-4 cbd_content_sidebar').find_all('a')
+        creature_links = ['https://www.biologicaldiversity.org/species/' + speclist[i-1].lower() + '/' + creature['href'] for creature in creature_page if len(creature.text) > 2]
+        creature_list = [creature.text for creature in creature_page if len(creature.text) > 2]
         for a, b in enumerate(creature_list, 1):
             print('{}. {}'.format(a, b.title()))
-        print('Choose one to learn more (1-{}): '.format(len(creature_list)))
+        print('Type a number, 1-{} and press enter to view'.format(len(creature_list)))
         iii = int(input(''))
         creature_site = requests.get(creature_links[iii-1])
         creature_soup = BeautifulSoup(creature_site.text, 'lxml')
