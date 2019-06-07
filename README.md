@@ -1,7 +1,7 @@
 # WikiScraper Collection
 Collection of user interactive programs for learning about various subjects.
 
-Created using BeautifulSoup4 and requests
+Created using BeautifulSoup4 and requests and PIL and bytesIO
 
 ## Projects
 - <b>Wikiscrape.py:</b> Searches wikipedia for Major U.S Cities.  Prints summaries, section by section, at users request.
