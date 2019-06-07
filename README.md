@@ -18,3 +18,4 @@ HOW TO:(ex. uses wikiscrape.py)
 ## To-Do:
 
 -add more cities to wikiscrape
+-add loop to species_scrape so user can explore more than one species
