@@ -3,6 +3,10 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
+# get packages first--> pip install requests beautifulsoup4
+# then run file in terminal --> python3 stateofunion.py
+# this script will create a csv file with every state of the union address since George Washington in 1790
+
 url = 'https://en.wikisource.org/wiki/Portal:State_of_the_Union_Speeches_by_United_States_Presidents'
 pages = requests.get(url)
 soup = BeautifulSoup(pages.text, 'lxml')
