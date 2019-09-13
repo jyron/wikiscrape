@@ -1,7 +1,7 @@
 # WikiScraper Collection
 A collection of user interactive programs that collect data from various sources, then present to users in a command line interface.
 
-Created using BeautifulSoup4 and requests and PIL and bytesIO
+Created using BeautifulSoup4, requests, PIL, and bytesIO
 
 ## Projects
 - <b>Wikiscrape.py:</b> Searches wikipedia for Major U.S Cities.  Prints summaries, section by section, at users request.
