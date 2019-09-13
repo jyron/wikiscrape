@@ -1,5 +1,5 @@
 # WikiScraper Collection
-Collection of user interactive programs for learning about various subjects.
+A collection of user interactive programs that collect data from various sources, then present to users in a command line interface.
 
 Created using BeautifulSoup4 and requests and PIL and bytesIO
 
