@@ -10,7 +10,7 @@ Created using BeautifulSoup4 and requests and PIL and bytesIO
 
 HOW TO:(ex. uses wikiscrape.py)
 1. clone repository
-2. --> pip install requirements.txt
+2. --> pip install -r requirements.txt
 3. choose a project (ex. wikiscrape.py)
 4. --> python3 wikiscrape.py
 5. have fun learning!
